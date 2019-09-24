@@ -1,0 +1,26 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/account/accounts",
+    "pages/movie/movies",
+    "pages/movie_detail/details",
+    "pages/movie_upload/uploads",
+    "pages/shuo/shuos",
+    "pages/shuo_detail/qdetails",
+    "pages/shuo_write/shuoshuos",
+    "pages/article/articles",
+    "pages/article_lists/list",
+    "pages/article_detail/details",
+    "pages/article_write/warticles",
+    "pages/test/tests",
+    "pages/dream/dreams"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "black"
+  },
+  "sitemapLocation": "sitemap.json"
+}

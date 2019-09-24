@@ -1,0 +1,37 @@
+<!--pages/qdetail/qdetails.wxml-->
+
+
+<page class="page" style="height:{{height}};width:{{width}};">
+  <view class="contentblock">
+            <view class="contenthead" style="background: {{item.background}};">
+            {{item.content}}
+            </view>
+  </view>
+  <view class="commens">
+      <scroll-view scroll-y='true' bindscrolltolower='more' style="height:100px" >
+          <view wx:for="{{commentlist}}">
+            <!-- 有评论内容 和 评论人 和 评论时间 -->
+            <view class="weui-cells weui-cells_after-title">
+                <view class="weui-cell" style="word-break: break-all;display:flex;flex-direction:column;">
+                  <view class="weui-cell__bd">{{item.author}}  {{item.time}} </view>
+
+                  <view style="font:xx-small"><text>{{item.content}}</text></view>                
+                   
+
+                    <!-- 评论内容 -->
+                    <!-- <view class="weui-cell__ft">说明文字</view> -->
+                </view>
+            </view>
+
+          </view>
+      </scroll-view>
+  
+  </view>
+
+  <view class="weui-footer weui-footer_fixed-bottom">
+      <view class="weui-footer__input">
+            <input placeholder="评论" bindinput="comment" class="comment"></input>
+            <button bindtap="commentsubmit" data-id="{{item.id}}">发表</button>    
+      </view>         
+  </view>
+</page>

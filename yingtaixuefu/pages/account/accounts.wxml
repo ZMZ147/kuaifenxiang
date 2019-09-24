@@ -1,0 +1,59 @@
+
+<import src="../../main.wxml"></import>
+<view class="weui-cells weui-cells_after-title">
+            <view class="weui-cell">
+                <view class="weui-cell__hd">
+                    <image  class="coverimg" src="{{user.avatarUrl}}"></image>
+                </view>
+                <view class="weui-cell__bd">
+                    <view>{{user.nickName}}</view>
+                    <view style="font-size: 13px;color: #888888;">连续签到{{userdetail.sign_day}}天</view>
+                </view>
+                <image class="sign" catchtap="changegrade" data-check="{{userdetail.is_sign}}" src="../images/qiandao.png"></image>
+            </view>
+            <view class="weui-cell weui-cell_access">
+                <view class="weui-cell__bd">
+                    <view class="singleline">来到快分享已经有</view>
+                </view>
+                <view class="weui-cell__ft weui-cell__ft_in-access">{{userdetail.days}}天</view>
+            </view>
+            <view class="weui-cell weui-cell_access">
+                <view class="weui-cell__bd">
+                    <view class="singleline">您的积分已有</view>
+                </view>
+                <view class="weui-cell__ft weui-cell__ft_in-access">{{userdetail.grade}}</view>
+            </view>
+            <view class="weui-cell weui-cell_access">
+                <view class="weui-cell__bd">
+                    <view class="singleline">关于快分享</view>
+                </view>
+                <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+            </view>
+            <view class="weui-cell weui-cell_access">
+                <view class="weui-cell__bd">
+                    <view class="singleline">赞助快分享</view>
+                </view>
+                <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+            </view>
+            <view class="weui-cell weui-cell_access">
+                <view class="weui-cell__bd">
+                    <view class="singleline">快分享意见区</view>
+                </view>
+                <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+            </view>
+            <view class="weui-cell weui-cell_access">
+                <view class="weui-cell__bd">
+                    <view class="singleline">快分享开发者</view>
+                </view>
+                <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+            </view>
+        </view>
+
+
+
+
+
+
+
+
+<template is="footercontent" data="{{personcolor}}"></template>

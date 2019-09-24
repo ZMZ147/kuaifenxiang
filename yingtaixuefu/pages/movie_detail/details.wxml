@@ -1,0 +1,84 @@
+<!--pages/mdetail/details.wxml-->
+<import src="../../main.wxml"></import>
+
+<view wx:if="{{is_active==true}}" style="height:{{height}}px">
+<!-- 上榜理由  评分 -->
+  <view class="first-block" style="height:{{height*0.35}}px">
+    <view class='moviecover'>
+      <image src="{{item.coverimg}}"></image>
+    </view>
+    <view class='first-right'>
+        <text>片名：{{item.name}}</text>
+        <text>类型：{{item.type}}</text>
+        <text>地区：{{item.country}}</text>
+        <text>放映时间：{{item.time}}</text>
+        <text bindtap="commentappend">评分：</text>
+    </view>
+  </view>
+  <view class="divLine"></view>
+  <view class="second-block" style="height:{{height*0.21}}px">
+        <textarea>简介：{{item.synopsis}}</textarea>
+  </view>
+     <!-- 分割线 -->
+  <view class="divLine"></view>
+  <view class="third-block" style="height:{{height*0.24}}px">
+          <view wx:if="{{is_comments==false}}">推荐理由：{{item.reason}}</view>
+          <view wx:else>
+            <scroll-view scroll-y='true' style="height:{{height*0.18}}" bindscrolltolower='more'>
+              <view wx:for="{{comments}}">
+                <view class="weui-cells weui-cells_after-title">
+                  <view class="weui-cell" style="word-break: break-all;display:flex;flex-direction:column;">
+                    <view class="weui-cell__bd">{{item.author}}  {{item.time}} </view>
+                    <view style="font:xx-small"><text>{{item.content}}</text></view>   
+                    <!-- 评论内容 -->
+                    <!-- <view class="weui-cell__ft">说明文字</view> -->
+                  </view>
+                </view>
+              </view>
+            </scroll-view>
+          </view>
+  </view>
+
+  <view class="divLine"></view>
+  <view class="weui-footer weui-footer_fixed-bottom">
+        <view class="weui-footer__view">
+          <view class="forth-block">
+            <view catchtap="want" data-type="want">想看{{item.xiangkannums}}</view>
+            <view catchtap="want" data-type="wanted">看过{{item.kanguonums}}</view>
+            <view catchtap="Comments" data-id="{{item.id}}">评论列表</view>
+            <view catchtap="commentappend" data-id="{{item.id}}">评论</view>
+          </view>
+        </view>
+  </view>
+
+</view>
+<view wx:else>
+  <view class="page" >
+      <view class="page__hd">
+          <view class="page__title">Loading</view>
+          <view class="page__desc">加载中</view>
+      </view>
+      <view class="page__bd">
+        <view class="weui-loading__wrp">
+            <view class="weui-loading"></view>
+        </view>
+        <view class="weui-loading__wrp">
+            <view class="loading wx_dot_loading"></view>
+        </view>
+        <view class="weui-loading__wrp">
+            <view class="loading wx_dot_loading wx_dot_loading_white"></view>
+        </view>
+      </view>
+  </view>
+</view>
+
+<view wx:if="{{addcomment==true}}">
+    <view class="commentform">
+          <input type="text" maxlength="140" bindinput="com" placeholder="不要超过140个字哦"></input>
+          <view class='button' catchtap="submit">发表</view>
+    </view>
+</view>
+<view wx:else>
+</view>
+<view class='empty'></view>
+

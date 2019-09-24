@@ -1,0 +1,24 @@
+<!--pages/shuoshuo/shuoshuos.wxml-->
+
+<view class="all" style="height:{{height}}">
+  <view class="first">
+    <view  class="title">
+        <view>奇葩说：此时的你想说</view>
+    </view>
+    <view class="first-button">
+      <view  bindtap="submit" >发表</view>
+    </view>
+  </view>
+  <text style="color:white">{{currentnum}}/88</text>
+  <view class="second" style="background:{{color}}" >
+          
+          <textarea class='input'  style="color:{{fontcolor}}" bindinput="qipashuo" placeholder="谁都不知道你是谁，就连你自己都不知道你是谁" data-color="{{color}}" maxlength="88" value="{{content}}"> 
+          </textarea>  
+          <!-- <image src="../images/voice.png" class="voice"></image> -->
+  </view>
+  <view class="third">
+        <view  wx:for="{{colorlist}}" class="color-list" >
+          <view class="circle" catchtap="changecolor" data-color="{{item}}" style="background:{{item}}"></view>
+        </view>
+  </view>
+</view>

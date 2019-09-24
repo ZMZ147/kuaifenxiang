@@ -1,0 +1,104 @@
+/* pages/shuoshuo/shuoshuos.wxss */
+
+.all{
+  width: 100%;
+  height: 100%;
+  background: black;
+  margin: auto;
+}
+
+.first{
+  margin: 50px;
+  display: inline-flex;
+  border: solid; 
+  width: 90%;
+  justify-content: space-around;
+  
+}
+
+.title{
+  width: 70%;
+  background: white;
+  font-size: small;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.first-button{
+  width: 40px;
+  height: 100%;
+  margin-left:0.1cm; 
+  font-size:xx-small; 
+  border: none;
+}
+
+.first-button view{
+  border-radius:5rpx; 
+  /* width: 38px;
+  height: 25px; */
+  /* font-size: xx-small; */
+  font-size: xx-small;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* background-color: white; */
+  color: white;
+}
+
+
+/* .first-button button text{
+  font: xx-small;
+  text-align: center;
+} */
+
+.second{
+  margin: 0.5cm;
+  border: solid;
+  width: 90%;
+  height:450rpx;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  white-space: pre-line;
+  word-break: break-all;
+
+}
+
+.input{
+  width: 100%;
+  height: 70%;
+  color: white;
+  display: flex;
+  /* justify-content: center; */
+  align-items: center; 
+  
+}
+
+.third{
+    display: flex;
+  flex-direction:row;
+  margin:0.5cm; 
+  flex-wrap: wrap;  
+    border: solid;
+}
+
+
+.voice{
+    border: solid;
+    height: 45px;
+    width: 45px;
+    border-radius: 25px;
+}
+
+.color-list{
+
+  justify-content: space-around;
+  margin: 0.2cm;
+}
+
+.circle{
+    height: 50px;
+    width: 50px;
+    border-radius: 25px;
+ 
+}

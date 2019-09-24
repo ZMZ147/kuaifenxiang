@@ -1,0 +1,32 @@
+<import src="../../main.wxml"></import>
+<template is='navbars' data="{{navbarTitle,navbarActiveIndex}}" ></template>
+  <!-- 奇葩说的主题内容 -->
+
+  <view class="shuoshuo" >
+    <scroll-view scroll-y="true" bindscrolltolower='more' style="height:{{height}}px" >
+      <!-- <view wx:for="{{shuoshuolist}}" > -->
+      <!-- 没一条都应该是一个块 -->
+        <view class="contentblock" wx:for="{{qishuolists}}" style="height:{{contentheight}}px">
+            <view class="contenthead" style="background: {{item.background}};"  bindtap="articledetail" data-id="{{item.id}}" data-index="{{index}}">{{item.content}}</view>
+            <!-- <icon type="click" size="20"></icon> -->
+            <view class="contentfoot">
+                        <view class='left'>
+                              <text>赞{{item.clicknums }} </text>
+                              <text >评论{{item.commentnums}}</text>
+                        </view>
+                        <view class='imglists'>
+                            <image  class="dianzan" src='../images/dianzan.png'  bindtap="dianzan" data-id="{{item.id}}" data-index="{{index}}"></image>
+                            <image class="pingjia" src="../images/pinglun.png"  bindtap="articledetail" data-index="{{index}}" data-id="{{item.id}}"></image>
+                            <image class="fenxiang" src="../images/fenxiang.png" bindtap="sharing" ></image>
+                        </view>    
+            </view>
+         </view>
+
+        <!-- </view> -->
+      </scroll-view>
+  </view>
+
+
+  
+<!-- 所以 设计到的元素是 -->
+ <template is='footercontent' data="{{indexcolor}}" ></template>

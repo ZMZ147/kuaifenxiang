@@ -1,0 +1,129 @@
+
+/* pages/movie/movies.wxss */
+
+@import '../../style/weui.wxss';
+
+
+.vedio{
+  margin-top:60px; 
+  width: 100%;
+  background-color: white ;
+  padding-top:3px; 
+}
+
+/* .vediotype{
+    margin-top:10rpx; 
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.countrytype{
+  margin-top:5rpx; 
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  border: 1px;
+}
+
+.vediotag{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-top:5rpx; 
+  border: 1px;
+}
+
+.vediotime{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-top:5rpx; 
+} */
+
+.swipercontain{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 25px;
+  justify-content: space-between;
+  padding-top:5px; 
+}
+
+.scroll-view-x { 
+
+ width: 300px; 
+
+ height: 30px; 
+
+ /* /* display: flex;  */
+
+ white-space: nowrap;
+ overflow: scroll;
+ display: inline-block;
+
+} 
+
+  
+
+.scroll-x-item { 
+
+ width: 51px; 
+ 
+  margin-left:7px; 
+ height:5px; 
+  text-align: center;
+ display: inline-table; 
+ overflow: scroll;
+}
+
+.active{
+  
+  background-color:gray; 
+
+  height: 23px; 
+}
+.active text{
+  color: gold
+}
+
+.divLine{
+  margin-top:-3.9cm; 
+ background:black;
+ width: 100%;
+ height: 10rpx;
+}
+
+
+.movielists{
+  margin-top:10px; 
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around; 
+  flex-wrap: wrap;
+  
+}
+.onemovie{
+  border: solid red;
+  margin-bottom:20rpx; 
+}
+
+.moviecover image{
+  width: 225rpx;
+  height: 280rpx;
+}
+.moviegrade {
+  margin-top:-0.8cm;
+  /* margin-left:50rpx;   */
+  margin-left:10rpx; 
+
+}
+.moviegrade text{
+  color: orange;
+}
+
+
+
+.moviename{
+  text-align: center
+}

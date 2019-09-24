@@ -1,0 +1,25 @@
+<!--pages/warticle/warticles.wxml-->
+<view class='page' >
+  <view class="article" style="height:{{height*0.8}}px">
+          <input bindinput="articletitle" placeholder="标题"></input>
+     <!-- 分割线 -->
+          <view class="divLine"></view>
+          <scroll-view scroll-y="true" style="height:{{height*0.75}}" >
+            <view class="conts">
+                <textarea class="areas" placeholder='正文' maxlength="500" bindinput="articlecontent"> 
+                    <text class="currentWordNumber">{{currentword|0}}/500</text>
+                </textarea>
+            </view>
+          </scroll-view>
+          <view class="weui-footer weui-footer_fixed-bottom" style="height:{{height*0.2}}px">
+              <view class="weui-footer__view">
+                <view class="footer" >
+                  <picker bindchange="bindtypeChange" value="{{index}}" range="{{typelist}}">
+                            <button class="weui-btn" type="default">{{typelist[typeindex]}}</button>
+                  </picker>
+                  <button catchtap="submit">提交</button>
+                </view>   
+              </view>
+          </view>
+  </view>
+</view>

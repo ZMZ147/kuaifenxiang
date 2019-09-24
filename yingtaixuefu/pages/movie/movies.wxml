@@ -1,0 +1,69 @@
+<!--pages/movie/movies.wxml-->
+<import src="../../main.wxml"></import>
+<template is='navbars' data="{{navbarTitle,navbarActiveIndex}}" ></template>
+
+<!-- 小程序以分享为主的 -->
+<view class="vedio" >
+      <view class="swipercontain">
+        <scroll-view scroll-x="true" class="scroll-view-x" > 
+          <view class="scroll-view-x"  > 
+              <view class="scroll-x-item " wx:for="{{vediotype}}">
+                <view class='{{currenttype==item?"active":""}}' bindtap="choose" data-nums="type:{{item}}"  data-where="currenttype"><text>{{item}}</text></view>
+              </view>  
+          </view> 
+        </scroll-view> 
+      </view>
+      <view class="swipercontain">
+        <scroll-view scroll-x="true" class="scroll-view-x" > 
+          <view class="scroll-view-x"  > 
+              <view class="scroll-x-item " wx:for="{{vediocountry}}" >
+              <view class='{{currentcountry==item?"active":""}}' bindtap="choose" data-nums="country:{{item}}"  data-where="currentcountry"><text>{{item}}</text></view>
+              </view>  
+          </view> 
+        </scroll-view> 
+      </view>
+      <view class="swipercontain">
+        <scroll-view scroll-x="true" class="scroll-view-x" > 
+          <view class="scroll-view-x"  > 
+              <view class="scroll-x-item " wx:for="{{vediotag}}">
+                <view class='{{currenttag==item?"active":""}}' bindtap="choose" data-nums="tag:{{item}}"  data-where="currenttag"><text>{{item}}</text></view>
+              </view>  
+          </view> 
+        </scroll-view> 
+      </view>
+      <view class="swipercontain">
+        <scroll-view scroll-x="true" class="scroll-view-x" > 
+          <view class="scroll-view-x"  > 
+              <view class="scroll-x-item " wx:for="{{vediotime}}">
+                <view class='{{currenttime==item?"active":""}}' bindtap="choose" data-nums="time:{{item}}" data-where="currenttime"><text>{{item}}</text></view>
+              </view>  
+          </view> 
+        </scroll-view> 
+    </view>
+</view> 
+
+<view class="box">
+  <scroll-view scroll-y="true" style="height:{{height}}px" bindscrolltolower='more'>
+    <view class='movielists' wx:if="{{success==true}}"> 
+    <!-- 一排只显示三个 下拉刷新 -->
+          <view wx:for="{{movielist}}" class="onemovie" bindtap="moviedetail" data-id="{{item.id}}" data-index="{{index}}">
+              <view class="moviecover"><image src="{{item.coverimg}}"></image></view>
+              <view class='moviegrade'><text>7.5</text></view>
+              <view class="moviename"><text>{{item.name}}</text></view>
+          </view>
+    </view>
+    <view  wx:else>
+            <view class="weui-loading__wrp">
+                <view class="weui-loading"></view>
+            </view>
+            <view class="weui-loading__wrp">
+                <view class="loading wx_dot_loading"></view>
+            </view>
+            <view class="weui-loading__wrp">
+                <view class="loading wx_dot_loading wx_dot_loading_white"></view>
+            </view>
+    </view>
+  </scroll-view>
+</view>
+ 
+

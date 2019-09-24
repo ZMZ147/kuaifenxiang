@@ -1,0 +1,49 @@
+<template name="navbars">
+        <view class="navbar">
+          <block wx:for="{{navbarTitle}}" wx:key="index">
+            <view class="navbar-item {{navbarActiveIndex === index ? 'navbar-item-active' : ''}}" data-navbar-index="{{index}}" catchtap="onNavBarTap">
+              <text>{{item}}</text>
+            </view>
+          </block>
+        </view>
+
+</template>
+
+
+
+<template name='footercontent'>
+  <!-- <view class="page"> -->
+      <view class="page__bd">
+        <view class="weui-tabbar">
+            <view class="weui-tabbar__item weui-bar__item" bindtap="gotoindex">
+                <view style="position: relative;display:inline-block;">
+                  <image src="../images/home.png" class="weui-tabbar__icon"></image>
+                </view>
+                <view class="weui-tabbar__label" style="color:{{indexcolor}}">首页</view>
+            </view>
+            <view class="weui-tabbar__item" bindtap="gotoshuoshuo">
+                <view style="position: relative;display:inline-block;">
+                  <image src="../images/qipashuo.png" class="weui-tabbar__icon"></image>
+                  <!-- <view class="weui-badge weui-badge_dot" style="position:absolute;top:-2px;left:calc(100% - 3px);"></view> -->
+                </view>
+                <view class="weui-tabbar__label" style="color:{{shuoshuocolor}}">说说</view>
+            </view>
+            <view class="weui-tabbar__item" catchtap="gotomovie">
+                <view style="position: relative;display:inline-block;">
+                  <image src="../images/upload.png" class="weui-tabbar__icon"></image>
+                  <!-- <view class="weui-badge weui-badge_dot" style="position:absolute;top:-2px;left:calc(100% - 3px);"></view> -->
+                </view>
+                <view class="weui-tabbar__label" style="color:{{uploadcolor}}">上传</view>
+            </view>
+            <view class="weui-tabbar__item" bindtap="gotomyself">
+                <view style="position: relative;display:inline-block;">
+                  <image src="../images/person.png" class="weui-tabbar__icon"></image>
+                  <!-- <view class="weui-badge weui-badge_dot" style="position:absolute;top:-2px;left:calc(100% - 3px);"></view> -->
+                </view>
+                <view class="weui-tabbar__label" style="color:{{personcolor}}">个人</view>
+            </view>
+        </view>
+      </view>
+  <!-- </view> -->
+
+</template>

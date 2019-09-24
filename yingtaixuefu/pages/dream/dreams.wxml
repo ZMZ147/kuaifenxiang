@@ -1,0 +1,37 @@
+<!--pages/dream/dreams.wxml-->
+<view class="title" wx:if="{{is_content==true}}">
+  <text >{{title}}</text>
+  <image class="edito" src="../images/edit.png" bindtap="changetitle"></image>
+</view>
+<view wx:else class='title'>
+
+  <input bindinput="newTitle" placeholder="哇,好一句箴言"></input> 
+  <button class="edito" bindtap="submitchange">提交</button>
+
+</view>
+
+<view wx:if="{{is_add==true}}">
+        <view class="add">
+         <input bindinput="newplan" placeholder="快分享，下一阶段还是要想想"></input>
+        <button  bindtap="submit">添加</button>
+        </view>
+      </view>
+<view wx:else></view>
+
+<view class="dreamlist">
+  <view class='weui-cell-third'>
+      <view class="page__title">
+      <image class='page-image' src="../images/fire.png" />辛苦了！{{user.name}}
+      </view>
+      <block wx:for="{{axis}}" wx:key="*this">
+        <view class='weui-cell-list'>
+            <view class='weui-cell-circle'></view>
+            <view class='weui-cell-line'>
+            <view class='weui-cell-time'>{{item.time}}</view>
+            <view class='weui-cell-event'>{{item.event}}</view>
+            </view>
+        </view>
+      </block>
+        <image class="adddream" src="../images/plus-circle.png" bindtap="adddream"></image>
+  </view>
+</view>

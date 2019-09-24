@@ -1,0 +1,95 @@
+/* pages/dream/dreams.wxss */
+
+    .weui-cell-third{
+     background: #fff;
+    }
+    .weui-cell-list{
+     background: #fff;
+     margin: 5px 50px 5px 50px;
+    }
+    .weui-cell-line{
+    /* width: 100px; */
+    margin-left: 5px;
+     border-left: 1px solid #ddd;
+     height: 100px;
+     background: #fff
+    }
+    .weui-cell-circle{
+     border: 1px solid #000;
+     border-radius: 5px;
+     width: 10px;
+     height: 10px;
+     border-color: blue;
+    }
+    .weui-cell-time{
+     /* width: 50px; */
+     float: left;
+     font-size:14px;
+     padding-left: 15px;
+     width: 72px;
+    }
+    .weui-cell-event{
+     padding-top: 15px;
+     padding-left: 15px;
+    }
+    .weui-cell-name{
+    font-size:14px;
+    height:23px;
+    margin-left: 100px;
+    }
+
+  .page-image{
+     border: 1px solid #000;
+     border-radius: 5px;
+     width: 15px;
+     height: 15px;
+     border-color:red;
+  }
+
+  .adddream{
+     border: 1px solid  green;
+     border-radius: 5px;
+     width: 10px;
+     height: 10px;
+     border-color:green;
+     margin-left: 1.3cm;
+     margin-top:-5cm; 
+  }
+
+.add{
+  width: 90%;
+  margin: 0.5cm;
+  border: solid red;
+}
+
+.add input{
+  width: 100%;
+  height: 3cm;
+
+}
+
+.dreamlist{
+  margin: 0.5cm;
+}
+
+.title{
+  justify-content: flex-start;
+  display: inline-flex;
+}
+
+.title text{
+  background: gold;
+  font-style: italic;
+}
+
+.edito{
+     border: 3px solid ;
+     border-radius: 5px;
+     width: 10px;
+     height: 10px;
+     margin-top:0.2cm;  
+}
+.title input{
+  width: 5cm;
+  border: solid white;
+}

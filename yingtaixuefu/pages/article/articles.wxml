@@ -1,0 +1,36 @@
+<!--pages/article/articles.wxml-->
+<import src="../../main.wxml"></import>
+<template is='navbars' data="{{navbarTitle,navbarActiveIndex}}" ></template>
+
+<view class='alls' >
+  <view class="first-line">
+      <button catchtap="getlists" data-type="随笔">随笔</button>
+      <button catchtap="getlists" data-type="诗词">诗享</button>
+      <!-- 这里还有一个制定计划的功能 -->
+      <button bindtap="mypublish" data-type="publish">我的发表</button>
+      <button bindtap="writearticle" >撰笔</button>
+  </view>
+  <view class="secontain" >
+    <view class='forth-block' style="height:{{ranksheight}}">
+          <view class='first-colnum'>
+              <view>阅读榜</view>
+              <view class="divLine"></view>
+              <view class="readranks" wx:for="{{readranks}}">
+              <view data-type="read" data-index="{{index}}" catchtap="detail">{{item.title}}</view>
+              </view>
+          </view>
+          <view class='second-colnum'>
+              <view>好评榜</view>
+              <view class="divLine"></view>
+              <view class="commentranks" wx:for="{{commentranks}}">
+              <view catchtap="detail" data-type="click" data-index="{{index}}">{{item.title}}</view>
+              </view>
+          </view>   
+    </view>  
+    <view class="weui-footer weui-footer_fixed-bottom">
+        <view class="weui-footer__view">
+              <view class="forth-right">{{oneword}}</view>
+        </view>
+    </view>
+  </view>
+</view>

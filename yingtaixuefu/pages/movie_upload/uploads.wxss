@@ -1,0 +1,67 @@
+/* pages/upload/uploads.wxss */
+
+.all{
+  width: 100%,
+}
+
+
+.first{
+  border-radius: 5px;
+  background: white;
+  width: 90%;
+  margin: 15px;
+  height: 30px;
+  display: flex;
+  text-align: center;
+  align-items: center;
+}
+
+.second{
+  margin: 15px;
+  width: 90%;
+  border:solid white;
+}
+
+
+
+.third{
+  margin: 15px;
+  width: 90%;
+  height: 1.8cm;
+  background: white;
+  border-radius: 5rpx;
+  text-align: center;
+  align-items: center;
+}
+
+.third textarea{
+  width: 100%;
+  height: 100%;
+
+}
+
+.forth{
+  margin: 15px;
+  width: 90%;
+  height: 1.8cm;
+  border-radius: 5rpx;
+  background: white;
+
+}
+.forth textarea{
+  /* display: flex; */
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  /* align-items: center; */
+
+}
+
+.submit{
+  width: 90%;
+  margin: auto;
+}
+.seat-img{
+    width: 235rpx;
+    height: 300rpx;
+}

@@ -1,0 +1,56 @@
+/* pages/articlelist/list.wxss */
+
+.title{
+
+  text-align: center;
+}
+
+.listcontain{
+
+  margin-top:0.3cm; 
+  display: flex;
+  flex-direction: column;
+  border: solid gold;
+
+}
+.oneinstance{
+  border: solid green;
+  width: 90%;
+  margin: 0.5cm;
+  height: 2cm;
+  display: flex;
+  flex-direction: column;
+}
+
+.cont{
+  text-align: center;
+  border: solid blue;
+  font-size: xx-small;
+}
+
+.read{
+  height: 0.4cm;
+  width: 1.5cm;
+  border: solid red;
+  margin-left:5.8cm; 
+  font-size: x-small;
+}
+
+.active{
+  background: grey;
+}
+
+.typelist{
+  background: white;
+
+}
+
+.weui-media-box__desc{
+    display: -webkit-box;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-break: break-all;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    font: x-small;
+}

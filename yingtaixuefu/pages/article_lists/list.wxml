@@ -1,0 +1,22 @@
+<!--pages/articlelist/list.wxml-->
+
+
+<import scr="../../main.wxml"></import>
+
+<view class="typelist">
+  <view class="weui-panel__hd" id="title">{{typename}}</view>
+        <scroll-view scroll-y="true" style="height:{{height}}px">
+              <view class="weui-panel__bd" >
+                  <view  class='weui-media-box weui-media-box_text' wx:for="{{datalists}}"  data-index="{{index}}" bindtap="getdetail">
+                      <view class="weui-media-box__title weui-media-box__title_in-text">{{item.title}} | 阅读 {{item.readnums}} 好评{{item.goodclicks}} </view>
+                      <view class="weui-media-box__desc">{{item.content}}</view>
+                  </view>
+                  <view wx:if="{{length==false}}">
+                    <view class="weui-loadmore weui-loadmore_line">
+                       <view class="weui-loadmore__tips weui-loadmore__tips_in-line">暂无数据</view>
+                    </view>
+                  </view>
+              </view>
+        </scroll-view>
+</view>
+

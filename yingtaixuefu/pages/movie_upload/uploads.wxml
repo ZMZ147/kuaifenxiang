@@ -1,0 +1,38 @@
+<!--pages/upload/uploads.wxml-->
+
+<view class="all" style="height:{{height}}px">
+  <view class="first" style="height:{{height*0.09}}px">
+      <input bindinput="vediotitle" placeholder="视频名" ></input>
+  </view>
+  <view class="second" style="height:{{height*0.29}}px">
+      <view class="vedio-left">
+        <view class="weui-uploader__input-box" bindtap="chooseImage">
+          <view wx:if="{{is_image==false}}" class="weui-uploader__input" ></view>
+          <view wx:else><image src="{{files}}" class="seat-img" ></image></view>
+        </view>
+      </view>
+      <view class="vedio-right">
+          <picker bindchange="bindtypeChange" value="{{index}}" range="{{typelist}}">
+                  <button class="weui-btn" type="default">{{typelist[typeindex]}}</button>
+          </picker>
+          <picker bindchange="bindcountryChange" value="{{index}}" range="{{countrylist}}">
+                  <button class="weui-btn" type="default">{{countrylist[countryindex]}}</button>
+          </picker>
+          <picker bindchange="bindTagChange" value="{{index}}" range="{{taglist}}">
+                  <button class="weui-btn" type="default">{{taglist[tagindex]}}</button>
+          </picker>
+          <picker bindchange="bindtimeChange" value="{{index}}" range="{{timelist}}">
+                  <button class="weui-btn" type="default">{{timelist[timeindex]}}</button>
+          </picker>
+      </view>
+  </view>
+  <view class="third" style="height:{{height*0.185}}px">
+        <textarea bindinput="introduce" placeholder="点我加简介"></textarea>
+  </view>
+  <view class="forth" style="height:{{height*0.185}}px" >
+        <textarea bindinput="reason" placeholder="点我写理由"></textarea> 
+  </view>
+  <view class="submit" style="height:{{height*0.09}}px">
+            <button type="submit" bindtap="submit">上传</button>
+  </view>
+</view>
